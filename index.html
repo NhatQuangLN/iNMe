@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- sanfansisco regular 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+
+    <title>iNMe - Nền Tảng Môi Giới Tư Vấn Các Sàn Giao Dịch Đầu Tư Tài Chính</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            filter: brightness(100%);
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 80px;
+            /* display: flex; */
+            /* text-align: center; */
+            /* background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.6)); */
+            /* align-items: center; */
+
+
+        }
+
+        header .logo {
+            /* font-size: 28px; */
+            /* font-weight: 700; */
+            /* color: black; */
+            float: left;
+        }
+
+        header .logo img {
+            width: 250px;
+            height: auto;
+        }
+
+        header .menu {
+            float: right;
+        }
+
+        header ul li {
+            display: inline-block;
+            color: #fff;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            font-size: 20px;
+            color: #fff;
+            margin: 0 25px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        header ul li a img {
+            width: 55px;
+            height: auto;
+            border-radius: 50%;
+
+        }
+
+        .wrap {
+            background: rgba(0, 0, 0, 0.5) url(img/bg-img2.png) no-repeat;
+            background-position: center;
+            background-size: cover;
+            min-height: 100vh;
+
+        }
+
+        .content {
+            max-width: 49%;
+            padding: 150px 140px 0;
+        }
+
+        .content h1 {
+            font-size: 190px;
+            /* height: 80%; */
+            background: -webkit-linear-gradient(#FF7364, #FFD33F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: inme 1s ease;
+        }
+
+        .content h2 {
+            font-size: 45px;
+            background: -webkit-linear-gradient(45deg, #120A9D, #45044A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: inme 1.2s ease;
+        }
+
+        .content p {
+            font-size: 20px;
+            padding: 25px 0;
+            font-weight: 300;
+            padding-top: 20px;
+            /* width: 300px; */
+            animation: inme 1.7s ease;
+        }
+
+        .content .btn-group {
+            margin-top: 35px;
+            display: flex;
+            animation: inme 1.9s ease;
+        }
+
+        .content a {
+            display: inline-block;
+            padding: 7px 45px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 50px;
+            background-image: linear-gradient(#FF7364, #FFD33F);
+            text-align: center;
+            font-weight: 600;
+            font-size: 20px;
+
+        }
+
+        .content .btn-group .login {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .content .btn-group .sign-up {
+            margin-right: 10%;
+        }
+
+        .graphic {
+            position: absolute;
+            margin-left: 43%;
+            margin-top: -44.3%;
+            /* z-index: 1; */
+        }
+
+        .graphic img {
+            width: 800px;
+            height: auto;
+            animation: graphic 1.5s ease;
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+
+        .bubbles img {
+            width: 50px;
+            border-radius: 50%;
+            animation: bubble 7s linear infinite;
+        }
+
+        .bubbles {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: absolute;
+            bottom: -70px;
+        }
+
+        @keyframes bubble {
+            0% {
+                transform: translateY(-90vh);
+                opacity: 0;
+
+            }
+
+            50% {
+
+                opacity: 1;
+            }
+
+            70% {
+
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+        }
+
+        .bubbles img:nth-child(1) {
+            animation-delay: 2s;
+            width: 25px;
+        }
+
+        .bubbles img:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .bubbles img:nth-child(3) {
+            animation-delay: 3s;
+            width: 25px;
+        }
+
+        .bubbles img:nth-child(4) {
+            animation-delay: 4.5s;
+        }
+
+        .bubbles img:nth-child(5) {
+            animation-delay: 3s;
+        }
+
+        .bubbles img:nth-child(6) {
+            animation-delay: 6s;
+            width: 20px;
+        }
+
+        .bubbles img:nth-child(7) {
+            animation-delay: 7s;
+            width: 25px;
+        }
+
+        .bubbles img:nth-child(8) {
+            animation-delay: 2s;
+            width: 55px;
+        }
+
+        .bubbles img:nth-child(9) {
+            animation-delay: 5s;
+            width: 35px;
+        }
+
+        @keyframes graphic {
+            0% {
+                transform: translateX(90vh);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.6;
+
+            }
+
+            70% {
+                opacity: 0.8;
+            }
+
+            100% {
+
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes inme {
+            0% {
+                transform: translateX(-90vh);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.4;
+
+            }
+
+            70% {
+                opacity: 0.8;
+            }
+
+            100% {
+
+                transform: translateX();
+                opacity: 1;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo"><img src="img/logo.png" alt=""></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Languages</a></li>
+                    <li><a href="detail-infor.html"><img style="vertical-align:middle" src="img/avatar.jpg" alt=""></a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="content">
+            <h1>iNMe</h1>
+            <h2>Meeting and Investing</h2>
+            <p>One of the top level playing field which
+                connects investors with investing
+                consultants supplies advisory services
+                as well as convey information or signals
+                about investment markets with demanding
+                investors.</p>
+            <div class="btn-group">
+                <a href="#" class="login">LOG IN</a>
+                <a href="#" class="sign-up">SIGN UP</a>
+            </div>
+        </div>
+    </div>
+    <div class="graphic">
+        <img src="img/graphic.png" alt="">
+    </div>
+
+    <div class="bubbles">
+        <img src="img/bitcoin-gold.png" alt="">
+        <img src="img/bitcoin.png" alt="">
+        <img src="img/bitcoin.png" alt="">
+        <img src="img/bitcoin-bubbles.jpg" alt="">
+        <img src="img/bitcoin-gold.png" alt="">
+        <img src="img/bitcoin-bubbles.jpg" alt="">
+        <img src="img/bitcoin.png" alt="">
+        <img src="img/bitcoin-gold.png" alt="">
+        <img src="img/bitcoin-bubbles.jpg" alt="">
+    </div>
+
+</body>
+
+</html>
